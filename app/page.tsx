@@ -1,11 +1,11 @@
-const dark = "new dark";
+import Header from "./_components/Header";
 
-export default function Home() {
+const Home = () => {
   return (
     <main>
-      <div>
-        <h1 className="text-red-600">Hello Tailwind</h1>
-      </div>
+      <Header />
     </main>
   );
-}
+};
+
+export default Home;
