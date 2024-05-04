@@ -1,4 +1,4 @@
-import Image from "next/image";
+const dark = "new dark";
 
 export default function Home() {
   return (
