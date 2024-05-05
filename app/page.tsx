@@ -3,10 +3,25 @@ import Header from "./_components/Header";
 import CategoryList from "./_components/category-list";
 import Search from "./_components/search-inputs";
 import ProductList from "./_components/product-list";
-import { Button } from "./_components/ui/button";
 import { ChevronRight } from "lucide-react";
+import { db } from "./_lib/prisma";
 
-const Home = () => {
+const Home = async () => {
+  const products = await db.product.findMany({
+    where: {
+      discountPercentage: {
+        gt: 0,
+      },
+    },
+    take: 10,
+    include: {
+      restaurant: {
+        select: {
+          name: true,
+        },
+      },
+    },
+  });
   return (
     <>
       <Header />
@@ -32,7 +47,7 @@ const Home = () => {
           <ChevronRight size={16} />
         </span>
       </div>
-      <ProductList />
+      <ProductList products={products} />
     </>
   );
 };
