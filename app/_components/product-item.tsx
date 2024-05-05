@@ -23,10 +23,11 @@ const ProductItem = ({ product }: ProductItemTypeProps) => {
           src={product.imageURL}
           alt={product.name}
           fill
+          sizes="100%"
           className="rounded-lg object-cover shadow-md"
         />
         <span
-          className="ga absolute
+          className=" absolute
          left-0.5 top-0.5 z-10 flex items-center rounded-2xl bg-red-600 px-2.5 py-0.5 text-sm text-white"
         >
           <ArrowDown size={18} />
