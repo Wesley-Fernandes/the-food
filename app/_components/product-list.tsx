@@ -15,7 +15,7 @@ interface props {
 
 const ProductList = async ({ products }: props) => {
   return (
-    <ul className="mt-1 flex list-none items-start gap-2 overflow-x-scroll px-4 [&::-webkit-scrollbar]:hidden">
+    <ul className="-mt-2 flex list-none items-start gap-2 overflow-x-scroll px-4 [&::-webkit-scrollbar]:hidden">
       {products.map((product) => (
         <ProductItem key={product.id} product={product} />
       ))}

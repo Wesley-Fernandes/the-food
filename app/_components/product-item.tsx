@@ -17,7 +17,7 @@ export interface ProductItemTypeProps {
 
 const ProductItem = ({ product }: ProductItemTypeProps) => {
   return (
-    <li className="mt-4 flex w-[150px] min-w-[150px] flex-col">
+    <li className="flex w-[150px] min-w-[150px] flex-col">
       <div className="relative h-[150px] w-full">
         <Image
           src={product.imageURL}
