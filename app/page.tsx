@@ -2,6 +2,9 @@ import Image from "next/image";
 import Header from "./_components/Header";
 import CategoryList from "./_components/category-list";
 import Search from "./_components/search-inputs";
+import ProductList from "./_components/product-list";
+import { Button } from "./_components/ui/button";
+import { ChevronRight } from "lucide-react";
 
 const Home = () => {
   return (
@@ -11,7 +14,7 @@ const Home = () => {
         <Search />
       </div>
       <CategoryList />
-      <div className="px-4 pt-6">
+      <div className="mb-4 px-4">
         <Image
           src="/promo-banner.png"
           alt="Até 30% de desconto em pizzas"
@@ -22,6 +25,14 @@ const Home = () => {
           quality={100}
         />
       </div>
+      <div className="mb-4 flex items-center justify-between px-4">
+        <h2 className="font-bold">Produtos recomendados</h2>
+        <span className="flex items-center justify-center gap-1 text-red-600">
+          Ver todos
+          <ChevronRight size={16} />
+        </span>
+      </div>
+      <ProductList />
     </>
   );
 };

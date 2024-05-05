@@ -17,7 +17,7 @@ export interface ProductItemTypeProps {
 
 const ProductItem = ({ product }: ProductItemTypeProps) => {
   return (
-    <li className="flex w-[150px] min-w-[150px] flex-col space-y-2">
+    <li className="mt-4 flex w-[150px] min-w-[150px] flex-col">
       <div className="relative h-[150px] w-full">
         <Image
           src={product.imageURL}
@@ -46,7 +46,9 @@ const ProductItem = ({ product }: ProductItemTypeProps) => {
             </span>
           )}
         </div>
-        <span className="truncate opacity-70">{product.restaurant.name}</span>
+        <span className="truncate text-xs opacity-70">
+          {product.restaurant.name}
+        </span>
       </div>
     </li>
   );
