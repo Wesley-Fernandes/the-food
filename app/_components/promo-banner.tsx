@@ -4,7 +4,7 @@ interface props {
   src: string;
   alt: string;
 }
-const Banner = ({ src, alt }: props) => {
+const PromoBanner = ({ src, alt }: props) => {
   return (
     <div className="px-4">
       <Image
@@ -20,4 +20,4 @@ const Banner = ({ src, alt }: props) => {
   );
 };
 
-export default Banner;
+export default PromoBanner;
