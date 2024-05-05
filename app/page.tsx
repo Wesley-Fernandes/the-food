@@ -3,8 +3,10 @@ import CategoryList from "./_components/category-list";
 import Search from "./_components/search-inputs";
 import ProductList from "./_components/product-list";
 import { ChevronRight } from "lucide-react";
-import { db } from "./_lib/prisma";
 import PromoBanner from "./_components/promo-banner";
+import RestaurantList from "./_components/restaurant-list";
+import { db } from "./_lib/prisma";
+import ReferenceSeparator from "./_components/reference-separator";
 
 const Home = async () => {
   const products = await db.product.findMany({
@@ -23,7 +25,7 @@ const Home = async () => {
     },
   });
   return (
-    <main className="flex w-full flex-col gap-4">
+    <main className="flex w-full flex-col gap-4 pb-12">
       <Header />
       <div className="px-5 pt-6">
         <Search />
@@ -35,13 +37,7 @@ const Home = async () => {
         key="pizzas"
       />
 
-      <div className="flex items-center justify-between px-4">
-        <h2 className="font-bold">Produtos recomendados</h2>
-        <span className="flex items-center justify-center gap-1 text-red-600">
-          Ver todos
-          <ChevronRight size={16} />
-        </span>
-      </div>
+      <ReferenceSeparator title="Pedidos Recomendados" src="/" key="pedidos" />
 
       <ProductList products={products} />
 
@@ -50,6 +46,13 @@ const Home = async () => {
         alt="Lanches apartir de R$ 17,90"
         key="lanches"
       />
+
+      <ReferenceSeparator
+        title="Restaurantes Recomendados"
+        src="/"
+        key="restaurants"
+      />
+      <RestaurantList />
     </main>
   );
 };
