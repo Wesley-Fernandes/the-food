@@ -1,12 +1,16 @@
-import { ProductItemTypeProps } from "../_components/product-item";
-export const calculateTotalPrice = ({
-  product,
-}: ProductItemTypeProps): Number => {
-  if (product.discountPercentage === 0) {
+interface props {
+  product: {
+    discountPercentage: any;
+    price: any;
+  };
+}
+export const calculateTotalPrice = ({ product }: props): Number => {
+  if (Number(product.discountPercentage) === 0) {
     return Number(product.price);
   }
 
-  const discount = Number(product.price) * (product.discountPercentage / 100);
+  const discount =
+    Number(product.price) * (Number(product.discountPercentage) / 100);
 
   return Number(product.price) - discount;
 };

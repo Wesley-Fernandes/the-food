@@ -25,7 +25,7 @@ const Home = async () => {
     },
   });
   return (
-    <main className="flex w-full flex-col gap-4 pb-12">
+    <main className="flex w-full flex-col gap-4 pb-12 sm:container sm:mx-auto">
       <Header />
       <div className="px-5 pt-6">
         <Search />
