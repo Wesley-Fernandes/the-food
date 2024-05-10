@@ -1,22 +1,15 @@
-import { ArrowDown } from "lucide-react";
 import Image from "next/image";
-import { calculateTotalPrice, toMoney } from "../_helpers/price";
-import { Prisma } from "@prisma/client";
+import { calculateTotalPrice, toMoney } from "../../_helpers/price";
+import { Product, Restaurant } from "@prisma/client";
 import Link from "next/link";
+import { DiscountPercentage } from "../discount-percentage";
 
 export interface ProductItemTypeProps {
-  product: Prisma.ProductGetPayload<{
-    include: {
-      restaurant: {
-        select: {
-          name: true;
-        };
-      };
-    };
-  }>;
+  restaurant: Restaurant;
+  product: Product;
 }
 
-const ProductItem = ({ product }: ProductItemTypeProps) => {
+export const ProductItem = ({ product, restaurant }: ProductItemTypeProps) => {
   return (
     <li className="w-[150px] min-w-[150px]">
       <Link href={`/products/${product.id}`} className="flex w-full flex-col">
@@ -28,13 +21,9 @@ const ProductItem = ({ product }: ProductItemTypeProps) => {
             sizes="100%"
             className="rounded-lg object-cover shadow-md"
           />
-          <span
-            className=" absolute
-         left-0.5 top-0.5 z-10 flex items-center rounded-2xl bg-red-600 px-2.5 py-0.5 text-sm text-white"
-          >
-            <ArrowDown size={18} />
-            20%
-          </span>
+          <div className="absolute left-0.5 top-0.5 z-10">
+            <DiscountPercentage product={product} />
+          </div>
         </div>
 
         <div className="flex flex-col">
@@ -49,13 +38,9 @@ const ProductItem = ({ product }: ProductItemTypeProps) => {
               </span>
             )}
           </div>
-          <span className="truncate text-xs opacity-70">
-            {product.restaurant.name}
-          </span>
+          <span className="truncate text-xs opacity-70">{restaurant.name}</span>
         </div>
       </Link>
     </li>
   );
 };
-
-export default ProductItem;

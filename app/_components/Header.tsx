@@ -1,14 +1,11 @@
-import Image from "next/image";
-import { Button } from "./ui/button";
-import { Menu } from "lucide-react";
+import { Navbar } from "./navbar";
 
 const Header = () => {
+  //<Image src="/logo.png" alt="logo" width={120} height={30} priority />
   return (
     <div className="flex justify-between px-5 pt-6">
-      <Image src="/logo.png" alt="logo" width={120} height={30} priority />
-      <Button size="icon" variant="ghost">
-        <Menu />
-      </Button>
+      <h1 className="text-2xl font-extrabold text-red-600">ÉFooda</h1>
+      <Navbar />
     </div>
   );
 };
