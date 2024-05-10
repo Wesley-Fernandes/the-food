@@ -1,11 +1,11 @@
 "use client";
 import { Button } from "@/app/_components/ui/button";
-import { ChevronLeftIcon, Home } from "lucide-react";
+import { ChevronLeftIcon } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { Navbar } from "../navbar";
 
 export const HeaderButtons = () => {
-  const { back, push } = useRouter();
+  const { back } = useRouter();
 
   return (
     <div className="absolute flex w-full justify-between px-2 py-2">

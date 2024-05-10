@@ -7,7 +7,7 @@ interface IListRestaurantProducts {
 export const ListRestaurantProducts = ({ data }: IListRestaurantProducts) => {
   return (
     <>
-      {Object.keys(data).map((key: string, index) => {
+      {Object.keys(data).map((key: string) => {
         return (
           <>
             <div className="flex items-center justify-between">

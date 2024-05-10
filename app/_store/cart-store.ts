@@ -1,5 +1,4 @@
-import { Product } from "@prisma/client";
-import { useReducer } from "react";
+import type { Product } from "@prisma/client";
 import { create } from "zustand";
 
 export interface ICartItem extends Product {

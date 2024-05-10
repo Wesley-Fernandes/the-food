@@ -12,7 +12,7 @@ const SearchPage = async () => {
         <Search />
       </div>
       <h1 className="pl-4 text-sm opacity-70">
-        Resultados para "Comida urbana"
+        Resultados para &quot;Comida urbana&quot;
       </h1>
       <Restaurant.List vertical={true} restaurants={restaurants} />
     </main>
