@@ -27,7 +27,7 @@ export const ProductItem = ({ product, restaurant }: ProductItemTypeProps) => {
         </div>
 
         <div className="flex flex-col">
-          <span className="font-semibold">{product.name}</span>
+          <span className="truncate font-semibold">{product.name}</span>
           <div className="flex items-center gap-2">
             <span className="truncate font-bold">
               {toMoney(calculateTotalPrice({ product }))}

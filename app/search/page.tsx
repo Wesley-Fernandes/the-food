@@ -9,8 +9,6 @@ interface props {
   };
 }
 const SearchPage = async ({ searchParams }: props) => {
-  //const restaurants = await db.restaurant.findMany({ take: 10 });
-
   const restaurants = await db.restaurant.findMany({
     where: {
       name: {

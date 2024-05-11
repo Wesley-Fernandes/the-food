@@ -8,6 +8,7 @@ import { Button } from "../ui/button";
 import { useState } from "react";
 import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 import { cartStore } from "@/app/_store/cart-store";
+import Link from "next/link";
 
 interface props {
   product: Prisma.ProductGetPayload<{
@@ -57,12 +58,15 @@ export const ProductDetails = ({ product, sugestion }: props) => {
                 className="h-full w-full object-cover"
               />
             </figure>
-            <span className="text-xs text-[#7E8392]">
+            <Link
+              href={`/restaurant/${product.restaurant.id}`}
+              className="text-xs text-[#7E8392]"
+            >
               {product.restaurant.name}
-            </span>
+            </Link>
           </div>
 
-          <h2 className="font-bold">{product.name}</h2>
+          <h2 className="text-lg font-bold">{product.name}</h2>
         </div>
 
         <div className="flex items-center justify-between">
@@ -103,7 +107,7 @@ export const ProductDetails = ({ product, sugestion }: props) => {
         {sugestion.length > 0 && (
           <>
             <h3 className="font-bold">Acompanhamentos</h3>
-            <ProductList products={sugestion} />
+            <ProductList products={sugestion} vertical={false} />
           </>
         )}
         <div className=" mt-6 flex w-full items-center  sm:justify-end">
