@@ -23,8 +23,12 @@ const Home = async () => {
         alt="Até 30% de desconto em pizzas"
         key="pizzas"
       />
-      <ReferenceSeparator title="Pedidos Recomendados" src="/" key="pedidos" />
-      <Product.List products={products} />
+      <ReferenceSeparator
+        title="Pedidos Recomendados"
+        src="/recomend/products"
+        key="pedidos"
+      />
+      <Product.List products={products} vertical={true} />
       <PromoBanner
         src="/promo-banner2.png"
         alt="Lanches apartir de R$ 17,90"
@@ -32,7 +36,7 @@ const Home = async () => {
       />
       <ReferenceSeparator
         title="Restaurantes Recomendados"
-        src="/"
+        src="/recomend/restaurants"
         key="restaurants"
       />
       <Restaurant.List vertical={false} restaurants={restaurants} />
