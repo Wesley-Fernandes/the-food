@@ -1,40 +1,56 @@
+**Delivery App README**
+
 
 ![Deliverancy](https://github.com/Wesley-Fernandes/the-food/assets/89518536/2544bc7f-9f60-4a81-9df0-789f27293629)
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Este é um aplicativo de delivery inspirado no iFood, desenvolvido como parte de um projeto pessoal de aprendizado e prática de tecnologias modernas. O objetivo deste aplicativo é proporcionar uma experiência de compra e entrega simplificada e moderna.
 
-## Getting Started
+### Tecnologias Utilizadas:
 
-First, run the development server:
+- **Next.js:** Framework React para construção de aplicações web.
+- **Tailwind CSS:** Biblioteca de estilos utilitários para construção de interfaces.
+- **PostgreSQL:** Banco de dados relacional para armazenamento de dados.
+- **Prisma:** ORM (Object-Relational Mapping) para interação com o banco de dados.
+- **Shadcn/UI:** Biblioteca de componentes estilizados para criação de interfaces consistentes.
+- **Zustand:** Biblioteca para gerenciamento de estado da aplicação.
+- **TypeScript:** Linguagem de programação tipada para aumentar a segurança e robustez do código.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Funcionalidades:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Seleção de restaurantes e visualização de cardápios.
+- Adição de itens ao carrinho de compras.
+- Realização de pedidos.
+- Acompanhamento do pedido em tempo real.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Como Executar:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. Clone este repositório para sua máquina local.
+   ```
+   git clone https://github.com/seuusuario/delivery-app.git
+   ```
 
-## Learn More
+2. Instale as dependências.
+   ```
+   cd delivery-app
+   npm install
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+3. Configure o ambiente.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   - Crie um arquivo `.env.local` na raiz do projeto e adicione as variáveis de ambiente necessárias, como a URL do banco de dados e a chave de API, se aplicável.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+4. Inicie a aplicação.
+   ```
+   npm run dev
+   ```
 
-## Deploy on Vercel
+5. Acesse a aplicação no seu navegador em `http://localhost:3000`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Contribuindo:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Sinta-se à vontade para enviar sugestões, relatar problemas ou contribuir com código. Basta abrir uma issue ou enviar um pull request. Seu feedback é sempre bem-vindo!
+
+### Licença:
+
+Este projeto está licenciado sob a [MIT License](https://opensource.org/licenses/MIT).
 # the-food
