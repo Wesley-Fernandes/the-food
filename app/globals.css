@@ -48,6 +48,10 @@
   --radius: 0.75rem;
 }
 
+body {
+  background-image: url("/foods.png");
+  background-size: auto;
+}
 @layer base {
   * {
     @apply box-border;
