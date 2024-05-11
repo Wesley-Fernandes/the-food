@@ -1,13 +1,13 @@
 import Header from "@/app/_components/Header";
 
-const RecomendRestaurantsPage = () => {
+const RecomendProductsPage = () => {
   return (
     <>
       <Header />
-      <h1>Restaurantes recomendados</h1>
+      <h1>Produtos recomendados</h1>
       <small>Pagina em construção</small>
     </>
   );
 };
 
-export default RecomendRestaurantsPage;
+export default RecomendProductsPage;
