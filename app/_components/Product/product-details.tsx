@@ -107,7 +107,7 @@ export const ProductDetails = ({ product, sugestion }: props) => {
         {sugestion.length > 0 && (
           <>
             <h3 className="font-bold">Acompanhamentos</h3>
-            <ProductList products={sugestion} vertical={false} />
+            <ProductList products={sugestion} vertical={true} />
           </>
         )}
         <div className=" mt-6 flex w-full items-center  sm:justify-end">

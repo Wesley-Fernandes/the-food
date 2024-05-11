@@ -13,7 +13,7 @@ export const ListRestaurantProducts = ({ data }: IListRestaurantProducts) => {
             <div className="flex items-center justify-between">
               <h2 className="font-bold">{key}</h2>
             </div>
-            <Product.List products={data[key]} key={key} />
+            <Product.List products={data[key]} key={key} vertical={true} />
           </>
         );
       })}
