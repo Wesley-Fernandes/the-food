@@ -1,4 +1,4 @@
-**Delivery App README**
+**Delivery**
 
 
 ![Deliverancy](https://github.com/Wesley-Fernandes/the-food/assets/89518536/2544bc7f-9f60-4a81-9df0-789f27293629)
@@ -17,40 +17,14 @@ Este é um aplicativo de delivery inspirado no iFood, desenvolvido como parte de
 
 ### Funcionalidades:
 
-- Seleção de restaurantes e visualização de cardápios.
-- Adição de itens ao carrinho de compras.
-- Realização de pedidos.
-- Acompanhamento do pedido em tempo real.
+- [x] Seleção de restaurantes e visualização de cardápios.
+- [x] Procurar restaurantes.
+- [x] Ver produtos dos restaurantes.
+- [x] Adição de itens ao carrinho de compras.
+- [x] Navegar por categorias.
+- [ ] Realização de pedidos.
+- [ ] Acompanhamento do pedido.
+- [ ] Pagamento com stripe
 
 ### Como Executar:
-
-1. Clone este repositório para sua máquina local.
-   ```
-   git clone https://github.com/seuusuario/delivery-app.git
-   ```
-
-2. Instale as dependências.
-   ```
-   cd delivery-app
-   npm install
-   ```
-
-3. Configure o ambiente.
-
-   - Crie um arquivo `.env.local` na raiz do projeto e adicione as variáveis de ambiente necessárias, como a URL do banco de dados e a chave de API, se aplicável.
-
-4. Inicie a aplicação.
-   ```
-   npm run dev
-   ```
-
-5. Acesse a aplicação no seu navegador em `http://localhost:3000`.
-
-### Contribuindo:
-
-- Sinta-se à vontade para enviar sugestões, relatar problemas ou contribuir com código. Basta abrir uma issue ou enviar um pull request. Seu feedback é sempre bem-vindo!
-
-### Licença:
-
-Este projeto está licenciado sob a [MIT License](https://opensource.org/licenses/MIT).
-# the-food
+O Site está online, basta você se dirigir até o site [Deliverancy](https://deliverancy.vercel.app/) e visualizar por si mesmo; E devo salientar que este projeto está licenciado sob a [MIT License](https://opensource.org/licenses/MIT).
