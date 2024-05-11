@@ -14,7 +14,6 @@ export async function ReceiveRestaurant(id: string) {
     where: {
       restaurantId: id,
     },
-    take: 40,
     include: {
       restaurant: true,
     },
