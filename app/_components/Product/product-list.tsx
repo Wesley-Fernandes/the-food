@@ -17,7 +17,7 @@ export const ProductList = ({ products, vertical }: props) => {
   //${orientation}
   return (
     <ul
-      className={`-mt-2 ${orientation} list-none items-start gap-2 overflow-x-scroll px-4 [&::-webkit-scrollbar]:hidden`}
+      className={`-mt-2 ${orientation} list-none items-start gap-3 overflow-x-scroll px-4 [&::-webkit-scrollbar]:hidden`}
     >
       {products.map((product) => (
         <ProductItem
