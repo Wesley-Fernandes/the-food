@@ -1,3 +1,6 @@
+
+![Deliverancy](https://github.com/Wesley-Fernandes/the-food/assets/89518536/2544bc7f-9f60-4a81-9df0-789f27293629)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
